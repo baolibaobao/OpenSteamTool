@@ -3,11 +3,9 @@
 #include "dllmain.h"
 #include <format>
 
-// ═══════════════════════════════════════════════════════════════════
-//  Manifest override hooks:
-//    BuildDepotDependency — patches depot entries' gid/size directly
-//      in the output vector (replaces the old KV-tree approach).
-// ═══════════════════════════════════════════════════════════════════
+// Manifest override hooks:
+//   BuildDepotDependency patches depot entries' gid/size directly
+//   in the output vector (replaces the old KV-tree approach).
 namespace {
 
     std::string DepotEntryDebug(const DepotEntry& e) {
